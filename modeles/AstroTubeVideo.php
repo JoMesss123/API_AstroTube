@@ -61,7 +61,7 @@ class modele_video {
         $liste = [];
         $mysqli = self::connecter();
 
-        $resultatRequete = $mysqli->query("SELECT id, titre, description, code, url, source, date_apparution, duree, nb_vue, nb_like, score, nb_commentaire, sous_titre, verified, presentation, categories FROM api_video ORDER BY id");
+        $resultatRequete = $mysqli->query("SELECT * FROM api_video ORDER BY id");
 
         foreach ($resultatRequete as $enregistrement) {
             $liste[] = new modele_video($enregistrement['id'], $enregistrement['titre'], $enregistrement['description'], $enregistrement['code'], $enregistrement['url'], $enregistrement['source'], $enregistrement['date_apparution'], $enregistrement['duree'], $enregistrement['nb_vue'], $enregistrement['nb_like'], $enregistrement['score'], $enregistrement['nb_commentaire'], $enregistrement['sous_titre'], $enregistrement['verified'], $enregistrement['presentation'], $enregistrement['categories']);

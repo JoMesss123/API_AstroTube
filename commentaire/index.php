@@ -17,16 +17,19 @@
 		case 'POST':
             $corpsJSON = file_get_contents('php://input'); 
             $data = json_decode($corpsJSON, TRUE);
-
             $controlleurAstrotubeAvis->ajouterJSON($data);
 			break; 
 		case 'PUT': 
+			
 			$corpsJSON = file_get_contents('php://input'); 
 			$data = json_decode($corpsJSON, TRUE);
 			$controlleurAstrotubeAvis->modifierJSON($data);
+		
 			break; 
 		case 'DELETE': 
+			
 			$controlleurAstrotubeAvis->supprimerJSON(); 
+			
 		break; 
 		default: 
 } 
