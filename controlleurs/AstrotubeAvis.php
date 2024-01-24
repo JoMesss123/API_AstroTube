@@ -1,6 +1,6 @@
 <?php
 
-require_once './modeles/AstrotubeAvis.php';
+require_once '../modeles/AstrotubeAvis.php';
 
 class ControlleurAstrotubeAvis {
 

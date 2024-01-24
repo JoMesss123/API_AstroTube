@@ -1,7 +1,7 @@
 <?php
 	header('Content-Type: application/json;'); 
 	header('Access-Control-Allow-Origin: *'); 
-    require_once './controlleurs/AstrotubeAvis.php';
+    require_once '../controlleurs/AstrotubeAvis.php';
     $controlleurAstrotubeAvis=new ControlleurAstrotubeAvis;
 
 	switch($_SERVER['REQUEST_METHOD']) { 

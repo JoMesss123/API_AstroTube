@@ -16,7 +16,9 @@ class ControlleurAstroTubeVideo {
 
     function ajouterJSON($data) {
         $resultat = new stdClass();
-        if (isset($data['titre']) && isset($data['description']) && isset($data['code']) && isset($data['url']) && isset($data['source']) && isset($data['date_apparution']) && isset($data['duree']) && isset($data['nb_vue']) && isset($data['nb_like']) && isset($data['score']) && isset($data['nb_commentaire']) && isset($data['sous_titre']) && isset($data['verified']) && isset($data['presentation']) && isset($data['categories'])) {
+        if (isset($data['titre']) && isset($data['description']) && isset($data['code']) && isset($data['url']) && isset($data['source']) && isset($data['date_apparution']) && 
+            isset($data['duree'])&& isset($data['nb_vue']) && isset($data['nb_like']) && isset($data['score']) && isset($data['nb_commentaire']) && isset($data['sous_titre']) && 
+            isset($data['verified']) && isset($data['presentation']) && isset($data['categories'])) {
             $resultat->message = modele_video::ajouter($data['titre'], $data['description'], $data['code'], $data['url'], $data['source'], $data['date_apparution'], $data['duree'], $data['nb_vue'], $data['nb_like'], $data['score'], $data['nb_commentaire'], $data['sous_titre'], $data['verified'], $data['presentation'], $data['categories']);
         } else {
             $resultat->message = "Impossible d'ajouter une vidéo. Des informations sont manquantes";
