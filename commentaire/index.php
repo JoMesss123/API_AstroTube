@@ -6,10 +6,13 @@
 
 	switch($_SERVER['REQUEST_METHOD']) { 
 		case 'GET': 
-			if(isset($_GET['id'])) { 
+			if(isset($_GET['id_commentaire'])) { 
 				
-                $controlleurAstrotubeAvis->afficherFicheJSON($_GET['id']);
-			} else { 
+                $controlleurAstrotubeAvis->afficherFicheJSON($_GET['id_commentaire']);
+			} else if (isset($_GET['id_video'])) { 
+				$controlleurAstrotubeAvis->afficherListeJSON($_GET['id_video']);
+			}
+				else {
 				 
                 $controlleurAstrotubeAvis->afficherJSON();
 			} 

@@ -139,7 +139,7 @@ class modele_video {
 
        
 
-        $requete->bind_param("ssssssiiiiisiiisi", $titre, $description, $code,  $url, $source, $date_apparution, $duree, $nb_vue, $nb_like, $score,  $nb_commentaire, $sous_titre, $verified, $presentation, $categories, $id);
+        $requete->bind_param("ssssssiiiiisiisi", $titre, $description, $code,  $url, $source, $date_apparution, $duree, $nb_vue, $nb_like, $score,  $nb_commentaire, $sous_titre, $verified, $presentation, $categories , $id);
 
         if($requete->execute()) { 
             $message = "Vidéo modifié";  
@@ -166,7 +166,7 @@ class modele_video {
         $mysqli = self::connecter();
         
         
-        if ($requete = $mysqli->prepare("DELETE FROM api-video WHERE id=?")) {      
+        if ($requete = $mysqli->prepare("DELETE FROM api_video WHERE id=?")) {      
 
         
 

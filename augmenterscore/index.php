@@ -2,7 +2,7 @@
 
 header('Content-Type: application/json;');
 header('Access-Control-Allow-Origin: *');
-require_once "./include/config.php";
+require_once "../include/config.php";
 
 $mysqli = new mysqli($host, $username, $password, $database);
 if ($mysqli -> connect_errno) {
