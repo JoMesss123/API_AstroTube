@@ -4,7 +4,8 @@ header('Content-Type: application/json;');
 header('Access-Control-Allow-Origin: *');
 require_once "../include/config.php";
 
-$mysqli = new mysqli($host, $username, $password, $database);
+
+$mysqli = new mysqli(Db::$host,Db:: $username,Db:: $password,Db:: $database);
 if ($mysqli -> connect_errno) {
     echo "Échec de connexion à la base de données MySQL: " . $mysqli -> connect_error;
     exit();
@@ -23,9 +24,8 @@ switch($_SERVER['REQUEST_METHOD']) {
                     $reponse->message .= "Succès";
                 } else {
                     $reponse->message .= "Échec";
-                    }
+                }
 
-                    
                 $requete->close();
             }
 
@@ -35,6 +35,7 @@ switch($_SERVER['REQUEST_METHOD']) {
         }
 
         echo json_encode($reponse);
+        break; 
     default:
 }
 
