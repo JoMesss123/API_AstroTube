@@ -1,7 +1,9 @@
 <?php
 
-header('Content-Type: application/json;');
-header('Access-Control-Allow-Origin: *');
+header('Content-Type: application/json;'); 
+header('Access-Control-Allow-Origin: *'); 
+header('Access-Control-Allow-Headers: Content-Type');
+header("Access-Control-Allow-Methods: POST, DELETE, PUT, OPTIONS");
 
 $mysqli = new mysqli(Db::$host,Db:: $username,Db:: $password,Db:: $database);
 if ($mysqli -> connect_errno) {

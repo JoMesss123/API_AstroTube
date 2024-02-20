@@ -1,6 +1,8 @@
 <?php
 	header('Content-Type: application/json;'); 
 	header('Access-Control-Allow-Origin: *'); 
+	header('Access-Control-Allow-Headers: Content-Type');
+	header("Access-Control-Allow-Methods: POST, DELETE, PUT, OPTIONS");
     require_once '../controlleurs/AstrotubeAvis.php';
     $controlleurAstrotubeAvis=new ControlleurAstrotubeAvis;
 
